@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Bahrul</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style untuk foto profil */
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%; /* Membuat foto bulat */
+            border: 5px solid #f5efef; /* Border putih di sekitar foto */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi saat hover */
+        }
+
+        /* Efek saat hover */
+        .profile-pic:hover {
+            transform: scale(1.1); /* Membesarkan foto sedikit saat hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Menambah bayangan saat hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <h1>Bahrul Ulum</h1>
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="askme.html">AskMe!</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="profile">
+            <h2>Curriculum Vitae</h2>
+            <img src="bahan/CV.jpg" alt="Bahrul Ulum" class="profile-pic">
+            <p><strong>Name:</strong> Bahrul Ulum</p>
+            <p><strong>Date of Birth:</strong> Bandung, 7 March 2002</p>
+            <h3>Education</h3>
+            <ul>
+                <li>SMAN 1 Cikalongwetan (2017-2020)</li>
+                <li>Universitas Pasundan (2020-2023, not completed)</li>
+                <li>STMIK Likmi Bandung (2024 - Present)</li>
+            </ul>
+            <h3>Work Experience</h3>
+            <ul>
+                <li>Baker at Madbagel Bandung</li>
+                <li>Admin Warehouse at various events</li>
+                <li>Kitchen staff at Mason Pine Hotel</li>
+                <li>Freelancer in photo and video editing</li>
+            </ul>
+            <h3>Skills</h3>
+            <p><strong>Hard Skills:</strong> Design, Programming, Office Applications</p>
+            <p><strong>Soft Skills:</strong> Good Communication, Critical Thinking, Emotional Intelligence</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Bahrul Ulum. All rights reserved.</p>
+    </footer>
+</body>
+</html>

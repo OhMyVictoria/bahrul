@@ -1,0 +1,291 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8efef;
+    color: rgb(0, 0, 0);
+    line-height: 1.6;
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+    color: #F1C40F;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-left h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Horizontal Navbar */
+.navbar-right ul {
+    display: flex; /* Makes the list horizontal */
+    list-style: none; /* Removes the bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-right ul li {
+    margin-right: 20px; /* Space between the links */
+}
+
+.navbar-right ul li a {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-right ul li a:hover {
+    background-color: #F1C40F;
+    color: #2C3E50;
+}
+
+/* Home Page Styles */
+.home {
+    padding: 50px 20px;
+    text-align: center; 
+}
+
+.home h2 {
+    color: #FFD700;
+    font-size: 36px;
+}
+
+.home p {
+    font-size: 18px;
+    color: white;
+    margin: 70px 0;
+}
+
+/* Profile Page Styles */
+.profile {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #f6efef;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left; /* Teks tetap rata kiri untuk informasi */
+}
+
+.profile h2 {
+    text-align: center; /* Memusatkan judul Curriculum Vitae */
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.profile .info {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Gambar Profil */
+.profile img {
+    display: block;        /* Menjadikan gambar sebagai elemen blok */
+    margin: 0 300px;        /* Memusatkan gambar secara horizontal */
+}
+
+
+.portfolio h2 {
+    color: #000000;
+    font-size: 36px;
+}
+
+/* Contact Page Styles */
+.contact {
+    max-width: 500px;
+    margin: 50px Auto;
+    padding: 10px;
+    background-color: #f6efef;
+    border-radius: 10px;
+    
+}
+
+.contact h2 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.contact a {
+    display: block;
+    text-align: top;
+    color: #000000;
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+/* AskMe Page Styles */
+.askme {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.askme h2 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.askme form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.askme input,
+.askme textarea {
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #2C3E50;
+    border-radius: 5px;
+}
+
+.askme input[type="submit"] {
+    background-color: #ffffff;
+    color: #2C3E50;
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.askme input[type="submit"]:hover {
+    background-color: #8E44AD;
+    color: white;
+}
+
+/* Style untuk setiap section dengan background */
+.background-section {
+    height: 100vh; /* Setiap section memenuhi tinggi layar */
+    background-size: cover; /* Gambar menyesuaikan ukuran */
+    background-position: center; /* Fokus pada tengah gambar */
+    background-repeat: no-repeat; /* Jangan ulangi gambar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Posisikan teks di tengah vertikal */
+    align-items: center; /* Posisikan teks di tengah horizontal */
+    color: white; /* Warna teks putih agar kontras */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Tambahkan efek bayangan pada teks */
+    padding: 20px;
+    text-align: center;
+}
+
+.background-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.background-section p {
+    font-size: 1.2rem;
+    max-width: 800px; /* Batasi lebar teks agar rapi */
+    margin: 0 auto;
+}
+
+.background-section h2 a:hover {
+    color: #ffd700; /* Warna kuning keemasan */
+    text-shadow: 0 0 30px rgba(0, 64, 255, 0.8);
+}
+
+/* Photoshop Folder Button */
+.folder {
+    display: inline-block;
+    position: relative;
+    width: 200px; /* Ukuran tombol tetap */
+    height: 200px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden; /* Menyembunyikan elemen yang keluar */
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.folder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mengisi seluruh tombol */
+    opacity: 0.7;
+}
+
+.folder p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Efek bayangan untuk teks */
+    transition: color 0.3s, background-color 0.3s;
+    padding: 5px 10px;
+}
+
+/* Efek Hover pada Teks */
+.folder p:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Latar belakang teks berubah saat hover */
+    color: #2C3E50; /* Warna teks berubah menjadi gelap */
+}
+footer {
+    position: fixed; /* Memastikan footer tetap di posisi bawah */
+    left: 0; /* Posisi di kiri */
+    bottom: 0; /* Posisi di bawah */
+    width: 100%; /* Lebar penuh */
+    background-color: #ffffff; /* Background putih untuk footer */
+    text-align: left; /* Teks rata kiri */
+    padding: 10px 20px; /* Padding sekitar teks */
+    font-size: 14px; /* Ukuran font */
+    color: #333; /* Warna teks */
+    z-index: 9999; /* Menjaga footer di atas konten lain */
+}
+footer {
+    text-align: center;
+    margin: 0;
+    padding: 10px 0; /* Mengurangi padding pada footer */
+    font-size: 12px; /* Menurunkan ukuran font */
+    background-color: #fff; /* Pastikan background footer tetap putih */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer {
+    text-align: center;
+    margin-top: 50px; /* Memberikan jarak yang lebih banyak antara footer dan konten lainnya */
+    padding: 10px 0; /* Padding footer agar lebih kompak */
+    font-size: 12px; /* Ukuran font lebih kecil */
+    background-color: #fff; /* Warna latar belakang putih */
+    width: 100%;
+}
+
