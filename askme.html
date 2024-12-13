@@ -103,7 +103,10 @@
             const form = event.target;
             const formData = new FormData(form);
 
-            fetch("https://forms.gle/nr2DQWhUYH35iaXSA", {
+            // URL untuk formResponse
+            const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLScVHRRjOYKeEbAaaeB4ffvbK6Wsnk5vePqs1lZJXVwCDfz_-g/formResponse";
+
+            fetch(googleFormURL, {
                 method: "POST",
                 body: formData
             })
@@ -142,11 +145,12 @@
             <h2>Ask Me Anything</h2>
             <!-- Formulir ini mengarah ke Google Form -->
             <form onsubmit="validateForm(event)">
+                <!-- Ganti 'entry.xxxxxx' dengan ID field yang benar di Google Form Anda -->
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="e.g., yourname@example.com" required>
+                <input type="email" id="email" name="entry.2005620554" placeholder="e.g., yourname@example.com" required>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Type your message here..." rows="5" required></textarea>
+                <textarea id="message" name="entry.1045781291" placeholder="Type your message here..." rows="5" required></textarea>
 
                 <button type="submit">Submit</button>
             </form>
