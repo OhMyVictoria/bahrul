@@ -77,51 +77,6 @@
             border-radius: 5px;
         }
     </style>
-    <script>
-        // Tambahkan validasi dan animasi form
-        function validateForm(event) {
-            event.preventDefault(); // Mencegah pengiriman default form
-
-            const emailInput = document.getElementById("email");
-            const messageInput = document.getElementById("message");
-            const successMessage = document.querySelector(".success-message");
-
-            // Validasi email
-            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,6}$/;
-            if (!emailPattern.test(emailInput.value)) {
-                alert("Please enter a valid email address.");
-                return;
-            }
-
-            // Pastikan pesan tidak kosong
-            if (messageInput.value.trim() === "") {
-                alert("Message cannot be empty.");
-                return;
-            }
-
-            // Kirim data ke Google Form
-            const form = event.target;
-            const formData = new FormData(form);
-
-            // URL untuk formResponse
-            const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLScVHRRjOYKeEbAaaeB4ffvbK6Wsnk5vePqs1lZJXVwCDfz_-g/formResponse";
-
-            fetch(googleFormURL, {
-                method: "POST",
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                // Tampilkan pesan berhasil
-                successMessage.style.display = "block";
-                emailInput.value = ""; // Reset form
-                messageInput.value = "";
-            })
-            .catch(error => {
-                alert("There was an error submitting your form. Please try again later.");
-            });
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -144,7 +99,7 @@
         <section class="askme">
             <h2>Ask Me Anything</h2>
             <!-- Formulir ini mengarah ke Google Form -->
-            <form onsubmit="validateForm(event)">
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLScVHRRjOYKeEbAaaeB4ffvbK6Wsnk5vePqs1lZJXVwCDfz_-g/formResponse" method="POST">
                 <!-- Ganti 'entry.xxxxxx' dengan ID field yang benar di Google Form Anda -->
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="entry.2005620554" placeholder="e.g., yourname@example.com" required>
